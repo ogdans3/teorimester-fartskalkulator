@@ -1,0 +1,49 @@
+{
+  "name": "teorimester-fartskalkulator",
+  "version": "1.0.0",
+  "description": "Norske fartsbøter for 2026: bot, prikker og tap av førerkort, regnet ut som fartsbotkalkulatoren på teorimester.no.",
+  "keywords": [
+    "fartsbot",
+    "fartsbøter",
+    "forenklet forelegg",
+    "prikker",
+    "førerkort",
+    "norway",
+    "speeding fine",
+    "traffic"
+  ],
+  "homepage": "https://teorimester.no/kalkulatorer/fartsbot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogdans3/teorimester-fartskalkulator.git"
+  },
+  "bugs": "https://github.com/ogdans3/teorimester-fartskalkulator/issues",
+  "license": "MIT",
+  "author": "Teorimester AS (https://teorimester.no)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "node --test \"test/*.test.ts\"",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
